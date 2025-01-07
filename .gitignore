@@ -1,0 +1,18 @@
+# IDE configuration folder and file
+.idea
+/.vscode
+
+# env
+*.env
+env.example
+
+
+# Dependency directories (remove the comment below to include it)
+/vendor
+
+
+# Others
+*.yml
+__debug_bin*
+
+credentials.json
