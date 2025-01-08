@@ -1,12 +1,15 @@
 package registry
 
-import "github.com/hutamy/golang-hexagonal-architecture/internal/port/outbound/registry"
+import (
+	sRegistry "github.com/hutamy/golang-hexagonal-architecture/internal/port/inbound/registry"
+	rRegistry "github.com/hutamy/golang-hexagonal-architecture/internal/port/outbound/registry"
+)
 
 type ServiceRegistry struct {
-	repositoryRegistry registry.RepositoryRegistry
+	repositoryRegistry rRegistry.RepositoryRegistry
 }
 
-func NewServiceRegistry(repositoryRegistry registry.RepositoryRegistry) ServiceRegistry {
+func NewServiceRegistry(repositoryRegistry rRegistry.RepositoryRegistry) sRegistry.ServiceRegistry {
 	return ServiceRegistry{
 		repositoryRegistry: repositoryRegistry,
 	}
